@@ -2,8 +2,13 @@
 
 text=$(mktemp --suffix=.txt)
 speech=$(mktemp)
-outfile="$(mktemp --suffix=.mp3)"
 audio_dir="/media"
+
+function cleanup {
+  rm ${text}
+}
+
+trap cleanup EXIT
 
 cat /dev/fd/0>${text}
 
@@ -16,5 +21,5 @@ ffmpeg \
   -i ${speech} \
   -i "${audio_dir}/03.wav" \
   -filter_complex 'concat=5:v=0:a=1' \
-  ${outfile} && \
-  cat ${outfile}
+  -f mp3 \
+  pipe:1
