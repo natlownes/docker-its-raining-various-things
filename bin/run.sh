@@ -6,6 +6,7 @@ audio_dir="/media"
 
 function cleanup {
   rm ${text}
+  rm ${speech}
 }
 
 trap cleanup EXIT
