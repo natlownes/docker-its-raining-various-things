@@ -7,7 +7,7 @@ with a file named mobydick.txt:
 docker run -i narf/its-raining-various-things < mobydick.txt > mobydick.mp3
 ```
 
-[with a phrase](s3.amazonaws.com/nat.vistarmedia.com/audio/horsemeat.mp3):
+[with a phrase](https://s3.amazonaws.com/nat.vistarmedia.com/audio/horsemeat.mp3):
 ```
 echo "horse meat" | docker run -i narf/its-raining-various-things > horsemeat.mp3
 ```
