@@ -1,5 +1,5 @@
 # ubuntu 16.04
-FROM ubuntu:104bec311bcdfc882ea08fdd4f5417ecfb1976adea5a0c237e129c728cb7eada
+FROM ubuntu@sha256:a0ee7647e24c8494f1cf6b94f1a3cd127f423268293c25d924fbe18fd82db5a4
 
 RUN apt-get update --fix-missing \
   && \
