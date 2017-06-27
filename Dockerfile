@@ -1,4 +1,5 @@
-FROM ubuntu:16.04
+# ubuntu 16.04
+FROM ubuntu:104bec311bcdfc882ea08fdd4f5417ecfb1976adea5a0c237e129c728cb7eada
 
 RUN apt-get update --fix-missing \
   && \
