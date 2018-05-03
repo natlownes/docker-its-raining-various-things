@@ -68,4 +68,26 @@ function iverson {
     pipe:1
 }
 
+function meek {
+  text2wave -scale ${scale} -o ${speech} ${text} && \
+  ffmpeg \
+    -y \
+    -i "${audio_dir}/01.wav" \
+    -i ${speech} \
+    -i "${audio_dir}/02.wav" \
+    -i ${speech} \
+    -i "${audio_dir}/03.wav" \
+    -i ${speech} \
+    -i "${audio_dir}/04.wav" \
+    -i ${speech} \
+    -i "${audio_dir}/05.wav" \
+    -i ${speech} \
+    -i "${audio_dir}/06.wav" \
+    -i ${speech} \
+    -i "${audio_dir}/07.wav" \
+    -filter_complex 'concat=13:v=0:a=1' \
+    -f mp3 \
+    pipe:1
+}
+
 ${theme}
